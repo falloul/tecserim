@@ -1,0 +1,364 @@
+{
+  "en": {
+    "navbar": {
+      "links": [
+        { "name": "About", "href": "#about" },
+        { "name": "Services", "href": "#services" },
+        { "name": "Products", "href": "#products" },
+        { "name": "Projects", "href": "#projects" },
+        { "name": "Contact", "href": "#contact" }
+      ]
+    },
+    "hero": {
+      "title": "TECSERIM Sarl",
+      "subtitle": "Technical Service Import",
+      "description": "Réfrigération Industrielle et Conditionnement d'Air",
+      "buttons": [
+        { "text": "Our Services", "href": "#services", "primary": true },
+        { "text": "Our Products", "href": "#products", "primary": false }
+      ]
+    },
+    "about": {
+      "title": "About TECSERIM",
+      "paragraphs": [
+        "TECSERIM Sarl (Technical Service Import) offers the service to install, configure, and commission all regulation components for refrigeration and air conditioning installations from CAREL INDUSTRIES. The multinational leader in electronics for air conditioning, refrigeration, and air humidification systems.",
+        "The mission of TECSERIM Sarl is to provide comprehensive service to clients with a combination of products and services for regulation systems for air conditioning machines and systems, regulation systems for industrial and commercial refrigeration machines and systems, supervision and remote management systems, air humidification systems, and systems for the wellness world."
+      ]
+    },
+    "services": {
+      "title": "Our Services",
+      "items": [
+        {
+          "icon": "installation",
+          "title": "Installation & Configuration",
+          "description": "Expert installation and configuration of all CAREL regulation components for refrigeration and air conditioning systems."
+        },
+        {
+          "icon": "maintenance",
+          "title": "System Maintenance",
+          "description": "Regular maintenance and service of refrigeration and HVAC control systems to ensure optimal performance."
+        },
+        {
+          "icon": "monitoring",
+          "title": "Monitoring Solutions",
+          "description": "Advanced monitoring and supervision solutions for remote management of your refrigeration and air conditioning systems."
+        }
+      ]
+    },
+    "products": {
+      "title": "Our Products",
+      "categories": [
+        {
+          "title": "Controllers",
+          "items": [
+            "pCO5+ Programmable Controllers",
+            "c.pCO Programmable Controllers",
+            "User Terminals (pGDX, PGDN)",
+            "UltraCella Cold Room Controllers",
+            "MPX Series Regulators"
+          ]
+        },
+        {
+          "title": "Supervision",
+          "items": [
+            "BOSS Supervisory Systems",
+            "BOSS Mini Supervisors",
+            "PlantGate Remote Access",
+            "pCOWeb Server Cards",
+            "Touchscreen Displays (17\", 7\", 4.3\")"
+          ]
+        },
+        {
+          "title": "Sensors",
+          "items": [
+            "Temperature & Humidity Probes",
+            "KTH Wall-mounted Sensors",
+            "GLD Refrigerant Gas Detectors",
+            "Pressure Transducers",
+            "rTM Wireless Sensors"
+          ]
+        },
+        {
+          "title": "Solutions",
+          "items": [
+            "Chiller & Heat Pump Control",
+            "Energy Monitoring Systems",
+            "Cold Room Management",
+            "Refrigerated Counter Control",
+            "Data Acquisition Systems"
+          ]
+        }
+      ]
+    },
+    "projects": {
+      "title": "Next Projects",
+      "subtitle": "Explore our upcoming initiatives to better serve our customers and expand our market presence.",
+      "sections": [
+        {
+          "title": "Targeted Marketing Campaigns",
+          "items": [
+            {
+              "title": "Supermarket Refrigeration Solutions",
+              "description": "Campaign focused on MPX controllers and GLD gas detectors for supermarket refrigeration systems, highlighting energy efficiency and compliance with refrigerant leak regulations."
+            },
+            {
+              "title": "Data Center Climate Control",
+              "description": "Marketing initiative targeting data centers with precision cooling solutions using pCO controllers and supervision systems for CRAC units."
+            },
+            {
+              "title": "Industrial Process Cooling",
+              "description": "Campaign highlighting our solutions for industrial cooling processes, featuring chiller control systems and remote monitoring capabilities."
+            }
+          ]
+        },
+        {
+          "title": "Technical Content Creation",
+          "columns": [
+            {
+              "title": "Implementation Guides",
+              "items": [
+                "Energy Monitoring with CAREL Meters and BOSS",
+                "Remote Access Solutions with PlantGate",
+                "Cold Room Control with UltraCella",
+                "Wireless Sensor Networks with rTM SE"
+              ]
+            },
+            {
+              "title": "Case Studies",
+              "items": [
+                "Supermarket Chain Refrigeration Upgrade",
+                "Industrial Freezing Tunnel Control System",
+                "Hospital HVAC Monitoring Solution",
+                "Hotel Climate Control Modernization"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Service Package Development",
+          "items": [
+            {
+              "title": "Remote Monitoring Service",
+              "description": "24/7 remote monitoring service using BOSS and PlantGate technology to provide proactive alarm management and system performance reports."
+            },
+            {
+              "title": "Annual Compliance & Maintenance Package",
+              "description": "Comprehensive annual service including gas detector calibration, controller updates, and regulatory compliance verification."
+            },
+            {
+              "title": "Energy Optimization Consultancy",
+              "description": "Analysis of system energy usage using CAREL energy meters and BOSS supervision to identify and implement energy-saving opportunities."
+            }
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contact Us",
+      "info": {
+        "title": "Company Information",
+        "company": "TECSERIM Sarl",
+        "address": "Rue Ait Amer 26, Hy Inbiat 11000 Salé",
+        "tel": "+212 537 80 90 93",
+        "fax": "+212 537 80 36 59", 
+        "gsm": "+212 661 862 130",
+        "email": "tecserim@tecserim.com"
+      },
+      "form": {
+        "title": "Send Us a Message",
+        "namePlaceholder": "Your Name",
+        "emailPlaceholder": "Your Email",
+        "messagePlaceholder": "Your Message",
+        "buttonText": "Send Message"
+      }
+    },
+    "footer": {
+      "copyright": "TECSERIM Sarl. All rights reserved.",
+      "links": [
+        { "text": "Privacy Policy", "href": "#" },
+        { "text": "Terms of Service", "href": "#" }
+      ]
+    }
+  },
+  "fr": {
+    "navbar": {
+      "links": [
+        { "name": "À Propos", "href": "#about" },
+        { "name": "Services", "href": "#services" },
+        { "name": "Produits", "href": "#products" },
+        { "name": "Projets", "href": "#projects" },
+        { "name": "Contact", "href": "#contact" }
+      ]
+    },
+    "hero": {
+      "title": "TECSERIM Sarl",
+      "subtitle": "Technical Service Import",
+      "description": "Réfrigération Industrielle et Conditionnement d'Air",
+      "buttons": [
+        { "text": "Nos Services", "href": "#services", "primary": true },
+        { "text": "Nos Produits", "href": "#products", "primary": false }
+      ]
+    },
+    "about": {
+      "title": "À Propos de TECSERIM",
+      "paragraphs": [
+        "TECSERIM Sarl (Technical Service Import) offre le service d'installation, de configuration et de mise en service de tous les composants de régulation pour les installations de réfrigération et de climatisation de CAREL INDUSTRIES. Le leader multinational de l'électronique pour les systèmes de climatisation, de réfrigération et d'humidification de l'air.",
+        "La mission de TECSERIM Sarl est de fournir un service complet aux clients avec une combinaison de produits et services pour les systèmes de régulation des machines et systèmes de climatisation, les systèmes de régulation des machines et systèmes de réfrigération industrielle et commerciale, les systèmes de supervision et de gestion à distance, les systèmes d'humidification de l'air et les systèmes pour le monde du bien-être."
+      ]
+    },
+    "services": {
+      "title": "Nos Services",
+      "items": [
+        {
+          "icon": "installation",
+          "title": "Installation & Configuration",
+          "description": "Installation et configuration experte de tous les composants de régulation CAREL pour les systèmes de réfrigération et de climatisation."
+        },
+        {
+          "icon": "maintenance",
+          "title": "Maintenance des Systèmes",
+          "description": "Maintenance régulière et service des systèmes de contrôle de réfrigération et de CVC pour assurer une performance optimale."
+        },
+        {
+          "icon": "monitoring",
+          "title": "Solutions de Surveillance",
+          "description": "Solutions avancées de surveillance et de supervision pour la gestion à distance de vos systèmes de réfrigération et de climatisation."
+        }
+      ]
+    },
+    "products": {
+      "title": "Nos Produits",
+      "categories": [
+        {
+          "title": "Contrôleurs",
+          "items": [
+            "Contrôleurs Programmables pCO5+",
+            "Contrôleurs Programmables c.pCO",
+            "Terminaux Utilisateur (pGDX, PGDN)",
+            "Contrôleurs UltraCella pour Chambres Froides",
+            "Régulateurs Série MPX"
+          ]
+        },
+        {
+          "title": "Supervision",
+          "items": [
+            "Systèmes de Supervision BOSS",
+            "Superviseurs BOSS Mini",
+            "Accès à Distance PlantGate",
+            "Cartes Serveur pCOWeb",
+            "Écrans Tactiles (17\", 7\", 4,3\")"
+          ]
+        },
+        {
+          "title": "Capteurs",
+          "items": [
+            "Sondes de Température & d'Humidité",
+            "Capteurs Muraux KTH",
+            "Détecteurs de Gaz Réfrigérant GLD",
+            "Transducteurs de Pression",
+            "Capteurs Sans Fil rTM"
+          ]
+        },
+        {
+          "title": "Solutions",
+          "items": [
+            "Contrôle de Refroidisseur & Pompe à Chaleur",
+            "Systèmes de Surveillance Énergétique",
+            "Gestion de Chambre Froide",
+            "Contrôle de Comptoir Réfrigéré",
+            "Systèmes d'Acquisition de Données"
+          ]
+        }
+      ]
+    },
+    "projects": {
+      "title": "Prochains Projets",
+      "subtitle": "Découvrez nos initiatives à venir pour mieux servir nos clients et élargir notre présence sur le marché.",
+      "sections": [
+        {
+          "title": "Campagnes Marketing Ciblées",
+          "items": [
+            {
+              "title": "Solutions de Réfrigération pour Supermarchés",
+              "description": "Campagne axée sur les contrôleurs MPX et les détecteurs de gaz GLD pour les systèmes de réfrigération des supermarchés, mettant en évidence l'efficacité énergétique et la conformité aux réglementations sur les fuites de réfrigérants."
+            },
+            {
+              "title": "Contrôle Climatique des Centres de Données",
+              "description": "Initiative marketing ciblant les centres de données avec des solutions de refroidissement de précision utilisant des contrôleurs pCO et des systèmes de supervision pour les unités CRAC."
+            },
+            {
+              "title": "Refroidissement de Processus Industriels",
+              "description": "Campagne mettant en avant nos solutions pour les processus de refroidissement industriels, présentant les systèmes de contrôle des refroidisseurs et les capacités de surveillance à distance."
+            }
+          ]
+        },
+        {
+          "title": "Création de Contenu Technique",
+          "columns": [
+            {
+              "title": "Guides d'Implémentation",
+              "items": [
+                "Surveillance Énergétique avec Compteurs CAREL et BOSS",
+                "Solutions d'Accès à Distance avec PlantGate",
+                "Contrôle de Chambre Froide avec UltraCella",
+                "Réseaux de Capteurs Sans Fil avec rTM SE"
+              ]
+            },
+            {
+              "title": "Études de Cas",
+              "items": [
+                "Modernisation de la Réfrigération de Chaîne de Supermarchés",
+                "Système de Contrôle de Tunnel de Congélation Industriel",
+                "Solution de Surveillance CVC Hospitalière",
+                "Modernisation du Contrôle Climatique Hôtelier"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Développement de Packages de Services",
+          "items": [
+            {
+              "title": "Service de Surveillance à Distance",
+              "description": "Service de surveillance à distance 24/7 utilisant la technologie BOSS et PlantGate pour fournir une gestion proactive des alarmes et des rapports de performance du système."
+            },
+            {
+              "title": "Package Annuel de Conformité & Maintenance",
+              "description": "Service annuel complet comprenant l'étalonnage des détecteurs de gaz, les mises à jour des contrôleurs et la vérification de la conformité réglementaire."
+            },
+            {
+              "title": "Conseil en Optimisation Énergétique",
+              "description": "Analyse de la consommation d'énergie du système à l'aide des compteurs d'énergie CAREL et de la supervision BOSS pour identifier et mettre en œuvre des opportunités d'économie d'énergie."
+            }
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contactez-Nous",
+      "info": {
+        "title": "Informations de l'Entreprise",
+        "company": "TECSERIM Sarl",
+        "address": "Rue Ait Amer 26, Hy Inbiat 11000 Salé",
+        "tel": "+212 537 80 90 93",
+        "fax": "+212 537 80 36 59", 
+        "gsm": "+212 661 862 130",
+        "email": "tecserim@tecserim.com"
+      },
+      "form": {
+        "title": "Envoyez-Nous un Message",
+        "namePlaceholder": "Votre Nom",
+        "emailPlaceholder": "Votre Email",
+        "messagePlaceholder": "Votre Message",
+        "buttonText": "Envoyer le Message"
+      }
+    },
+    "footer": {
+      "copyright": "TECSERIM Sarl. Tous droits réservés.",
+      "links": [
+        { "text": "Politique de Confidentialité", "href": "#" },
+        { "text": "Conditions d'Utilisation", "href": "#" }
+      ]
+    }
+  }
+} 

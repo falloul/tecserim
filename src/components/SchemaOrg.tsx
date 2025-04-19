@@ -18,7 +18,7 @@ const SchemaOrg = () => {
     ],
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+212 37 809093',
+      telephone: '+212 537 809093',
       contactType: 'customer service',
       areaServed: 'MA',
       availableLanguage: ['French', 'Arabic', 'English'],
@@ -40,7 +40,7 @@ const SchemaOrg = () => {
     image: 'https://www.tecserim.com/clima.webp',
     '@id': 'https://www.tecserim.com',
     url: 'https://www.tecserim.com',
-    telephone: '+212 37 809093',
+    telephone: '+212 537 809093',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Rue Ait Amer 26, Hy Inbiat',

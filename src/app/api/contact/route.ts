@@ -55,7 +55,8 @@ export async function POST(request: Request) {
       },
       body: JSON.stringify(emailData)
     });
-
+    const data = await response.json();
+    console.log("Brevo API response:", data); // Now visible in Netlify logs
     if (!response.ok) {
       const errorData = await response.json();
       console.error('Brevo API error:', errorData);
@@ -69,7 +70,7 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error('Error sending email:', error);
     return NextResponse.json(
-      { error: 'Failed to send email' },
+      { error: 'Failed to send email'+error },
       { status: 500 }
     );
   }

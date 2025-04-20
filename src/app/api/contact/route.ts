@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
 
 export async function POST(request: Request) {
   try {
@@ -13,39 +12,55 @@ export async function POST(request: Request) {
       );
     }
 
-    // Create a transporter with Gmail
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASSWORD,
-      },
-    });
+    // Brevo API endpoint
+    const brevoUrl = 'https://api.brevo.com/v3/smtp/email';
 
     // Email content
-    const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER, // Sending to yourself
-      subject: `Contact form submission from ${name}`,
-      replyTo: email,
-      text: `
-        Name: ${name}
-        Email: ${email}
-        
+    const emailData = {
+      sender: {
+        name: name,
+        email: process.env.EMAIL_USER,
+      },
+      to: [{
+        email: 'alloulfatimazahra9@gmail.com',
+        name: 'Tecserim'
+      }],
+      replyTo: {
+        email: email,
+        name: name
+      },
+      subject: `Nouveau message de: ${name}`,
+      textContent: `
+        Nom: ${name}
+        E-mail: ${email}
         Message:
         ${message}
       `,
-      html: `
-        <h3>New Contact Form Submission</h3>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
+      htmlContent: `
+        <h3>Nouveau message</h3>
+        <p><strong>Nom:</strong> ${name}</p>
+        <p><strong>E-mail:</strong> ${email}</p>
         <p><strong>Message:</strong></p>
         <p>${message.replace(/\n/g, '<br>')}</p>
       `,
     };
 
-    // Send email
-    await transporter.sendMail(mailOptions);
+    // Send email via Brevo API
+    const response = await fetch(brevoUrl, {
+      method: 'POST',
+      headers: {
+        'accept': 'application/json',
+        'api-key': process.env.BREVO_API_KEY as string,
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(emailData)
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      console.error('Brevo API error:', errorData);
+      throw new Error('Failed to send email via Brevo API');
+    }
 
     return NextResponse.json(
       { message: 'Email sent successfully' },
@@ -58,4 +73,4 @@ export async function POST(request: Request) {
       { status: 500 }
     );
   }
-} 
+}

@@ -69,10 +69,10 @@ export async function POST(request: Request) {
       { message: 'Email sent successfully' },
       { status: 200, headers: { "Access-Control-Allow-Origin": "*" }  }
     );
-  } catch (error: any) {
+  } catch (error) {
     console.error('Error sending email:', error);
     return NextResponse.json(
-      { error: 'Failed to send email', details: error.message, },
+      { error: 'Failed to send email', details: error, },
       { status: 500 }
     );
   }

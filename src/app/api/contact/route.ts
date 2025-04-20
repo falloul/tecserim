@@ -56,7 +56,9 @@ export async function POST(request: Request) {
       body: JSON.stringify(emailData)
     });
     const data = await response.json();
-    console.log("Brevo API response:", data); // Now visible in Netlify logs
+     // Log the full Brevo API response (critical for debugging)
+     console.log('Brevo API Response:', JSON.stringify(data, null, 2));
+     
     if (!response.ok) {
       const errorData = await response.json();
       console.error('Brevo API error:', errorData);
@@ -65,12 +67,12 @@ export async function POST(request: Request) {
 
     return NextResponse.json(
       { message: 'Email sent successfully' },
-      { status: 200 }
+      { status: 200, headers: { "Access-Control-Allow-Origin": "*" }  }
     );
-  } catch (error) {
+  } catch (error: any) {
     console.error('Error sending email:', error);
     return NextResponse.json(
-      { error: 'Failed to send email'+error },
+      { error: 'Failed to send email', details: error.message, },
       { status: 500 }
     );
   }

@@ -80,7 +80,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-20 bg-teal-700 text-white" id="contact">
+    <section className="py-20 bg-gradient-to-r from-blue-500 to-red-500 text-white" id="contact">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">{content.title}</h2>
         
@@ -90,7 +90,7 @@ const Contact = () => {
           </div>
 
           <div className="md:w-1/2">
-            <h3 className="text-xl font-semibold mb-6 text-teal-200">{content.form.title}</h3>
+            <h3 className="text-xl font-semibold mb-6 text-blue-200">{content.form.title}</h3>
             
             {/* Status messages */}
             {status.submitted && (
@@ -114,7 +114,7 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder={content.form.namePlaceholder}
-                className="w-full px-4 py-3 rounded-md bg-white/10 border border-teal-400/30 text-white placeholder-teal-200/70 focus:ring-2 focus:ring-teal-300/50"
+                className="w-full px-4 py-3 rounded-md bg-white/10 border border-blue-400/30 text-white placeholder-blue-200/70 focus:ring-2 focus:ring-blue-300/50"
                 required
               />
               <input
@@ -123,7 +123,7 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder={content.form.emailPlaceholder}
-                className="w-full px-4 py-3 rounded-md bg-white/10 border border-teal-400/30 text-white placeholder-teal-200/70 focus:ring-2 focus:ring-teal-300/50"
+                className="w-full px-4 py-3 rounded-md bg-white/10 border border-blue-400/30 text-white placeholder-blue-200/70 focus:ring-2 focus:ring-blue-300/50"
                 required
               />
               <textarea
@@ -132,13 +132,13 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder={content.form.messagePlaceholder}
                 rows={4}
-                className="w-full px-4 py-3 rounded-md bg-white/10 border border-teal-400/30 text-white placeholder-teal-200/70 focus:ring-2 focus:ring-teal-300/50"
+                className="w-full px-4 py-3 rounded-md bg-white/10 border border-blue-400/30 text-white placeholder-blue-200/70 focus:ring-2 focus:ring-blue-300/50"
                 required
               />
               <button
                 type="submit"
                 disabled={status.submitting}
-                className={`bg-white text-teal-700 px-6 py-3 rounded-md font-medium hover:bg-teal-50 transition ${
+                className={`bg-white text-blue-700 px-6 py-3 rounded-md font-medium hover:bg-blue-50 transition ${
                   status.submitting ? 'opacity-70 cursor-not-allowed' : ''
                 }`}
               >

@@ -32,13 +32,13 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed w-full z-10 transition-all duration-300 ${
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-md' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link href="/" className={`font-bold text-2xl ${isScrolled ? 'text-teal-700' : 'text-white'}`}>
+          <Link href="/" className={`font-bold text-2xl ${isScrolled ? 'text-blue-700' : 'text-white'}`}>
             TECSERIM
           </Link>
 
@@ -48,7 +48,7 @@ const Navbar = () => {
               <Link 
                 key={index}
                 href={link.href} 
-                className={`hover:text-teal-500 transition ${
+                className={`hover:text-red-500 transition ${
                   isScrolled ? 'text-gray-800' : 'text-white'
                 }`}
               >
@@ -92,7 +92,7 @@ const Navbar = () => {
               <Link 
                 key={index}
                 href={link.href} 
-                className="block py-2 text-gray-800 hover:text-teal-600 transition"
+                className="block py-2 text-gray-800 hover:text-red-600 transition"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.name}

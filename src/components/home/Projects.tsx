@@ -10,8 +10,8 @@ const Projects = () => {
   return (
     <section className="py-20 bg-white" id="projects">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-teal-800">{content.title}</h2>
-        <div className="w-20 h-1 bg-teal-500 mx-auto mb-6 rounded-full"></div>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-blue-800">{content.title}</h2>
+        <div className="w-20 h-1 bg-red-500 mx-auto mb-6 rounded-full"></div>
         <p className="text-center text-gray-600 mb-16 max-w-3xl mx-auto">
           {content.subtitle}
         </p>
@@ -20,12 +20,12 @@ const Projects = () => {
           {/* Marketing Campaigns */}
           {content.sections.map((section, sectionIndex) => (
             <div key={sectionIndex} className="bg-white p-8 rounded-lg shadow-lg border border-gray-100">
-              <h3 className="text-2xl font-semibold mb-6 text-teal-700">{section.title}</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-blue-700">{section.title}</h3>
               
               {section.items && (
                 <div className="space-y-6">
                   {section.items.map((item, itemIndex) => (
-                    <div key={itemIndex} className="border-l-4 border-teal-500 pl-6 py-2">
+                    <div key={itemIndex} className="border-l-4 border-blue-500 pl-6 py-2">
                       <h4 className="text-lg font-medium mb-2 text-gray-800">{item.title}</h4>
                       <p className="text-gray-600">{item.description}</p>
                     </div>

@@ -10,12 +10,12 @@ const Hero = () => {
   const content = getContent(language).hero;
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 pb-32 bg-gradient-to-br from-teal-800 via-teal-700 to-emerald-600 overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-20 pb-32 bg-gradient-to-br from-blue-800 via-blue-700 to-red-600 overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-teal-400"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-blue-400"></div>
         <div className="absolute top-40 -left-20 w-60 h-60 rounded-full bg-emerald-400"></div>
-        <div className="absolute bottom-40 right-20 w-40 h-40 rounded-full bg-teal-300"></div>
+        <div className="absolute bottom-40 right-20 w-40 h-40 rounded-full bg-blue-300"></div>
       </div>
       
       <div className="container mx-auto px-4 z-10">
@@ -31,8 +31,8 @@ const Hero = () => {
                   href={button.href} 
                   className={`px-6 py-3 rounded-md font-medium transition transform hover:scale-105 ${
                     button.primary 
-                      ? "bg-white text-teal-800 hover:bg-gray-100" 
-                      : "border border-white text-white hover:bg-teal-600"
+                      ? "bg-white text-red-800 hover:bg-gray-100" 
+                      : "border border-white text-white hover:bg-red-600"
                   }`}
                 >
                   {button.text}

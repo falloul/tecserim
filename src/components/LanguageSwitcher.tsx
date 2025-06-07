@@ -11,7 +11,7 @@ const LanguageSwitcher = () => {
         onClick={() => setLanguage('fr')}
         className={`px-2 py-1 rounded-md text-sm font-medium ${
           language === 'fr'
-            ? 'bg-teal-600 text-white'
+            ? 'bg-blue-600 text-white'
             : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
         }`}
       >
@@ -21,7 +21,7 @@ const LanguageSwitcher = () => {
         onClick={() => setLanguage('en')}
         className={`px-2 py-1 rounded-md text-sm font-medium ${
           language === 'en'
-            ? 'bg-teal-600 text-white'
+            ? 'bg-blue-600 text-white'
             : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
         }`}
       >

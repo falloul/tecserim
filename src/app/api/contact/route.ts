@@ -1,51 +1,54 @@
 import { NextResponse } from 'next/server';
 
+interface ContactRequestBody {
+  name: string;
+  email: string;
+  message: string;
+}
+
 export async function POST(request: Request) {
   try {
-    const { name, email, message } = await request.json();
+    const body: ContactRequestBody = await request.json();
+    const { name, email, message } = body;
 
-    // Validate input
-    if (!name || !email || !message) {
+    if (!name || !email || !message || !email.includes('@')) {
       return NextResponse.json(
-        { error: 'Name, email and message are required' },
+        { error: 'Invalid input. Please provide a valid name, email, and message.' },
         { status: 400 }
       );
     }
 
-    // Brevo API endpoint
     const brevoUrl = 'https://api.brevo.com/v3/smtp/email';
 
-    // Email content
     const emailData = {
       sender: {
         name: name,
-        email: process.env.EMAIL_USER,
+        email: process.env.BREVO_SENDER_EMAIL,
       },
       to: [{
-        email: 'alloulfatimazahra9@gmail.com',
+        email: 'alloulfatimazahra9@gmail.com', 
         name: 'Tecserim'
       }],
       replyTo: {
         email: email,
         name: name
       },
-      subject: `Nouveau message de: ${name}`,
+      subject: `New Contact Form Message from: ${name}`,
       textContent: `
-        Nom: ${name}
-        E-mail: ${email}
+        Name: ${name}
+        Email: ${email}
         Message:
         ${message}
       `,
       htmlContent: `
-        <h3>Nouveau message</h3>
-        <p><strong>Nom:</strong> ${name}</p>
-        <p><strong>E-mail:</strong> ${email}</p>
+        <h3>New message from your website's contact form</h3>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
         <p><strong>Message:</strong></p>
-        <p>${message.replace(/\n/g, '<br>')}</p>
+        <p style="white-space: pre-wrap;">${message}</p>
       `,
     };
 
-    // Send email via Brevo API
     const response = await fetch(brevoUrl, {
       method: 'POST',
       headers: {
@@ -55,24 +58,22 @@ export async function POST(request: Request) {
       },
       body: JSON.stringify(emailData)
     });
-    const data = await response.json();
-     // Log the full Brevo API response (critical for debugging)
-     console.log('Brevo API Response:', JSON.stringify(data, null, 2));
-     
-    if (!response.ok) {
-      const errorData = await response.json();
-      console.error('Brevo API error:', errorData);
-      throw new Error('Failed to send email via Brevo API');
-    }
 
+    const responseData = await response.json();
+
+    if (!response.ok) {
+      console.error('Brevo API Error:', responseData);
+      throw new Error(`Brevo API responded with status ${response.status}`);
+    }
     return NextResponse.json(
-      { message: 'Email sent successfully' },
-      { status: 200, headers: { "Access-Control-Allow-Origin": "*" }  }
+      { message: 'Email sent successfully!', brevoResponse: responseData },
+      { status: 200 }
     );
+
   } catch (error) {
-    console.error('Error sending email:', error);
+    console.error('An error occurred in the send-email API route:', error);
     return NextResponse.json(
-      { error: 'Failed to send email', details: error, },
+      { error: 'Sorry, something went wrong and we could not send your message.' },
       { status: 500 }
     );
   }
